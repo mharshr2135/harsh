@@ -7,8 +7,8 @@ s.listen(3)
 
 while True:
     c,addr = s.accept()
-    name = c.recv(1024).decode()
-    print("Connected with", addr,name)
+    mes1 = c.recv(1024).decode()
+    print("Connected with", addr,mes1)
 
     c.send(bytes("welcome",'utf-8'))
     c.close()
